@@ -16,6 +16,7 @@ import javax.validation.Valid;
 @RequestMapping("user")
 @Slf4j
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
     private UserService userService;
     private EmailSenderService emailSenderService;
@@ -44,6 +45,7 @@ public class UserController {
 //    public ResponseEntity logout() {
 //        return ResponseEntity.status(HttpStatus.OK).body(KeycloakService.logout(keycloakService.whoAmI()););
 //    }
+    @CrossOrigin(origins = "*")
     @GetMapping("/profile")
     public ResponseEntity profile() {
         return ResponseEntity.status(HttpStatus.OK).body(keycloakService.whoAmI());

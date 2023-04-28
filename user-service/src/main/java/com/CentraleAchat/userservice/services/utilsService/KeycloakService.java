@@ -41,7 +41,7 @@ public class KeycloakService {
                 .realm("pidev")
                 .clientId("pidev")
                 .clientSecret("pvs3oudngIxtojOSiITvfcU2QTn7cgkr")
-                .username("systemadmin")
+                .username("systemadmin@mail.com")
                 .password("systemadmin")
                 .build();
     }
